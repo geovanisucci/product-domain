@@ -4,6 +4,11 @@
     <ProjectReference Include="..\ProductBoundedContext.Domain\ProductBoundedContext.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="1.60.1" />
+    <PackageReference Include="FluentValidator" Version="2.0.4" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
