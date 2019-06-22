@@ -4,6 +4,10 @@
     <ProjectReference Include="..\ProductBoundedContext.Domain\ProductBoundedContext.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="1.60.1" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
