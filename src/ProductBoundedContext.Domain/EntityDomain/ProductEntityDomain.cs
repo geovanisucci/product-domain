@@ -1,3 +1,4 @@
+using System;
 using FluentValidator;
 using FluentValidator.Validation;
 
@@ -9,6 +10,9 @@ namespace ProductBoundedContext.Domain.EntityDomain
         public string Description { get; set; }
         public string BarCode { get; set; }
         public string UnitMeasurementId { get; set; }  
+        public int Active { get; set; }
+        public DateTime CreatedAt { get; set; }      
+        public DateTime? UpdatedAt { get; set; } 
 
         public bool Validate()
         {
