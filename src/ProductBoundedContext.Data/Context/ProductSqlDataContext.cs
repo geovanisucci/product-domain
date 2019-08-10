@@ -2,7 +2,7 @@ using System.Data.SqlClient;
 
 namespace ProductBoundedContext.Data.Context
 {
-    public class ProductSqlDataContext
+    public class ProductSqlDataContext 
     {
         public ProductSqlDataContext(string connectionString)
         {

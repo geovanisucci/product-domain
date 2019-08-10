@@ -22,6 +22,7 @@ namespace ProductBoundedContext.Data.Repositories
 
         public async Task<ProductEntityDomain> CreateProductAsync(ProductEntityDomain product)
         {
+            await _productSqlDataContext.Connection.OpenAsync();
             using (var trans = _productSqlDataContext.Connection.BeginTransaction())
             {
                 try
@@ -29,10 +30,12 @@ namespace ProductBoundedContext.Data.Repositories
                     await _productSqlDataContext.Connection.InsertAsync(ProductEntityData.ToEntityData(product), trans);
 
                     trans.Commit();
+                    _productSqlDataContext.Connection.Close();
                 }
                 catch (System.Exception)
                 {
                     trans.Rollback();
+                    _productSqlDataContext.Connection.Close();
                 }
 
             }
